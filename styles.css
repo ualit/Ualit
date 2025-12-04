@@ -1,0 +1,257 @@
+/* Hero */
+.hero {
+    padding-block: var(--space-2xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-md);
+}
+@keyframes intro {
+    0% {
+        transform: translate(0px, 20px);
+        opacity: 0;
+    }
+}
+.hero h1,
+h4 {
+    margin-block-start: var(--space-sm);
+    animation: intro 1s ease;
+}
+.hero h4 {
+    max-inline-size: 55ch; /* ==> affects about hero h4 only */
+}
+/* Smaller Grid */
+.content-group {
+    padding-block-end: var(--space-2xl);
+}
+.block-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(11.75rem, 40vw, 18.75rem), 1fr));
+    gap: var(--space-md);
+    margin-block-start: var(--space-sm);
+}
+.card {
+    padding: var(--space-sm);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-border);
+    transition: var(--transition-smooth);
+}
+.card:hover {
+    box-shadow: var(--shadow-large);
+}
+.card p {
+    color: var(--color-text-base);
+}
+.card .text-small {
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+.card h3 {
+    margin-block-start: 0.6rem;
+}
+/* Contacts */
+.content-block-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-lg);
+    padding: var(--space-lg);
+    margin-block-end: var(--space-md);
+}
+.content-block-centered > * {
+    margin-block-start: 0;
+    max-inline-size: 50ch;
+    text-align: center;
+}
+.content-block-centered h2 {
+    margin-block-start: 1em;
+}
+.content-block-centered p {
+    color: var(--color-text-base);
+}
+.primary-button {
+    background-color: var(--color-bg-dark);
+    color: var(--color-bg-light);
+    padding: 0.75em 1.75em;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-smooth);
+}
+.primary-button:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-bg-dark);
+    box-shadow: var(--shadow-medium);
+}
+/* Larger Grid */
+.block-md {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(12rem, 40vw, 26rem), 1fr));
+    grid-gap: var(--space-sm) var(--space-lg);
+}
+#highlight {
+    background-color: var(--color-bg-neutral);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+.card-md {
+    margin-inline: auto;
+}
+figcaption {
+    font-size: var(--font-size-sm);
+    margin-block-start: var(--space-sm);
+}
+.card-md h2 {
+    margin-block-start: 0.6rem;
+}
+.card-md-a {
+    color: var(--color-accent);
+}
+.tertiary-button {
+    font-size: var(--font-size-md);
+    font-family: "Manrope", serif, sans-serif;
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+    padding-block-start: var(--space-md);
+    transition: var(--transition-smooth);
+}
+.tertiary-button:hover {
+    color: var(--color-accent);
+}
+.cta-arrow {
+    color: var(--color-accent);
+}
+/* About - Carousel */
+.flex-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    max-inline-size: 100%;
+    /* redundant by flex child */
+    padding: 0.5rem 0 1rem 0;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.carousel-item {
+    flex-grow: 1;
+    /* flex-grow 1 is needed due to flex-basis 0% */
+    flex-basis: 0%;
+    /* flex-shrink: 1 or 0 is overwritten by min-width: min() */
+    min-inline-size: min(17.5rem, 100%);
+    /* Minimum width before horizontal scroll kicks in at 17.5rem */
+    scroll-snap-align: start;
+}
+.carousel-item figure {
+    margin: 0;
+}
+.carousel-item .image-container {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    inline-size: 100%;
+    /* redundant */
+    aspect-ratio: 1/1;
+}
+.carousel-item img {
+    transition: var(--transition-smooth);
+    inline-size: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.carousel-item:hover img {
+    transform: scale(1.1);
+}
+/* About - Work - Large Grid  */
+.group-title {
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+.a-link {
+    color: var(--color-accent);
+}
+.a-link:hover {
+    text-decoration: underline;
+}
+.list-alt > * {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6rem;
+}
+.list-alt .aside {
+    font-weight: var(--font-weight-medium);
+    flex: 0 0 4rem;
+}
+.list-alt .main {
+    flex: 1 1 0;
+    min-inline-size: min(17.5rem, 100%);
+}
+.list-alt {
+    margin-block: revert;
+}
+.list-alt li {
+    margin-block-end: 1rem;
+}
+.list-alt p {
+    margin-block-start: 0;
+}
+/* About - What I'm reading - Large Grid  */
+.img-large-grid {
+    width: 50%;
+    margin: 0 auto;
+    aspect-ratio: revert;
+}
+.img-large-grid-caption {
+    text-align: center;
+}
+/* Blogs */
+.margin-sm {
+    padding-block-end: var(--space-sm);
+}
+.text-small {
+    margin-block-start: 0;
+    font-size: var(--font-size-sm);
+}
+.excerpt {
+    text-wrap: balance;
+}
+.post a {
+    color: var(--color-accent);
+}
+.post a:hover {
+    text-decoration: underline;
+}
+.entry {
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 36em;
+    margin-inline: auto;
+}
+.entry em {
+    font-size: var(--font-size-sm);
+}
+.entry blockquote {
+    font-family: "Manrope";
+    font-weight: 600;
+    margin: 1.8em 0.8em;
+    border-left: 0.2rem dotted var(--color-accent);
+    padding: 0.1em 1em;
+    color: var(--color-bg-dark);
+    font-size: var(--font-size-md);
+    font-style: italic;
+}
+.entry li {
+    list-style: revert;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: var(--color-bg-neutral);
+    width: 100%;
+    margin: 0;
+    padding: 0.6em;
+    border-radius: var(--radius-lg);
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: var(--color-bg-neutral); /* New light cyan background */
+}
