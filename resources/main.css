@@ -132,6 +132,7 @@ svg {
 a {
     text-decoration: none;
     color: inherit;
+    font-family: inhert;
 }
 li {
     list-style: none;
