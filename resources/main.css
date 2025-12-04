@@ -6,7 +6,7 @@
     font-stretch: normal;
     src:
         local("OpenSans Regular"),
-        url("OG/fonts/OpenSans-Regular-webfont.woff") format("woff");
+        url("resources/OpenSans-Regular-webfont.woff") format("woff");
 }
 @font-face {
     font-family: "Manrope";
@@ -14,7 +14,7 @@
     font-weight: 600;
     src:
         local("Manrope Semibold"),
-        url("OG/fonts/manrope-semibold.woff") format("woff");
+        url("resources/manrope-semibold.woff") format("woff");
 }
 @font-face {
     font-family: "Manrope";
@@ -22,7 +22,7 @@
     font-weight: 700;
     src:
         local("Manrope Bold"),
-        url("OG/fonts/manrope-bold.woff") format("woff");
+        url("resources/manrope-bold.woff") format("woff");
 }
 :root {
     font-size: 1em;
@@ -77,7 +77,7 @@
 body {
     /* 1. Define the grid size */
     --tile-size: 3vw;
-    --line-color: hsl(var(--color-shadow) / 0.05);
+    --line-color: hsl(var(--color-shadow) / 0.03);
     /* CRITICAL: Hides the horizontal overflow */
     overflow-x: hidden;
 
