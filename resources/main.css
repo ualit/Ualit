@@ -1,28 +1,29 @@
-/* Design */
 @font-face {
-    font-family: "OpenSans";
+    font-family: "OpenSans Regular";
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     src:
         local("OpenSans Regular"),
-        url("resources/OpenSans-Regular-webfont.woff") format("woff");
+        url("./OpenSans-Regular-webfont.woff") format("woff");
 }
+
 @font-face {
     font-family: "Manrope";
     font-style: normal;
     font-weight: 600;
     src:
         local("Manrope Semibold"),
-        url("resources/manrope-semibold.woff") format("woff");
+        url("manrope-semibold.woff") format("woff");
 }
+
 @font-face {
     font-family: "Manrope";
     font-style: normal;
     font-weight: 700;
     src:
         local("Manrope Bold"),
-        url("resources/manrope-bold.woff") format("woff");
+        url("../resources/manrope-bold.woff") format("woff");
 }
 :root {
     font-size: 1em;
@@ -132,7 +133,6 @@ svg {
 a {
     text-decoration: none;
     color: inherit;
-    font-family: inhert;
 }
 li {
     list-style: none;
@@ -179,7 +179,7 @@ h4 {
 body {
     min-height: 100vh;
     line-height: 1.5;
-    font-family: "OpenSans", serif, sans-serif;
+    font-family: "OpenSans Regular", Fallback, sans-serif;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-normal);
     background-color: var(--color-bg-light);
