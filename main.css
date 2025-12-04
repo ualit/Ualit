@@ -6,7 +6,7 @@
     font-stretch: normal;
     src:
         local("OpenSans Regular"),
-        url("og/fonts/OpenSans-Regular-webfont.woff") format("woff");
+        url("OG/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 @font-face {
     font-family: "Manrope";
@@ -14,7 +14,7 @@
     font-weight: 600;
     src:
         local("Manrope Semibold"),
-        url("og/fonts/manrope-semibold.woff") format("woff");
+        url("OG/fonts/manrope-semibold.woff") format("woff");
 }
 @font-face {
     font-family: "Manrope";
@@ -22,7 +22,7 @@
     font-weight: 700;
     src:
         local("Manrope Bold"),
-        url("og/fonts/manrope-bold.woff") format("woff");
+        url("OG/fonts/manrope-bold.woff") format("woff");
 }
 :root {
     font-size: 1em;
