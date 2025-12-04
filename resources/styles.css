@@ -1,3 +1,4 @@
+/* Design */
 @font-face {
     font-family: "OpenSans";
     font-weight: 400;
@@ -22,6 +23,56 @@
     src:
         local("Manrope Bold"),
         url("resources/manrope-bold.woff") format("woff");
+}
+:root {
+    font-size: 1em;
+
+    --color-bg-light: #e9edf5;
+    --color-bg-neutral: rgba(212, 220, 232, 0.6);
+    --color-bg-dark: #192a47;
+    --color-text-base: #3c4e68;
+    --color-text-dark: var(--color-bg-dark);
+    --color-muted: var(--color-bg-neutral);
+    --color-shadow: 220deg 60% 50%;
+    --color-accent: hsl(var(--color-shadow));
+
+    --shadow-border:
+        0 0 2px hsl(var(--color-shadow) / 0.7),
+        0 0 4px hsl(var(--color-shadow) / 0.333),
+        0 0 6px hsl(var(--color-shadow) / 0.2);
+    --shadow-medium:
+        1px 2px 2px hsl(var(--color-shadow) / 0.333),
+        2px 4px 4px hsl(var(--color-shadow) / 0.333),
+        3px 6px 6px hsl(var(--color-shadow) / 0.333);
+    --shadow-large:
+        1px 2px 2px hsl(var(--color-shadow) / 0.2),
+        2px 4px 4px hsl(var(--color-shadow) / 0.2),
+        4px 8px 8px hsl(var(--color-shadow) / 0.2),
+        8px 16px 16px hsl(var(--color-shadow) / 0.2),
+        16px 32px 32px hsl(var(--color-shadow) / 0.2);
+
+    --font-size-sm: clamp(0.9rem, 2vw, 1rem);
+    --font-size-base: clamp(1rem, 2vw, 1.375rem);
+    --font-size-md: clamp(1.25rem, 3vw, 1.7rem);
+    --font-size-lg: clamp(1.75rem, 4vw, 2.15rem);
+    --font-size-xl: clamp(2.15rem, 5vw, 3.45rem);
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+
+    --gutter: var(--space-sm);
+    --space-sm: clamp(1rem, 0.92rem + 0.39vw, 1.52rem);
+    --space-md: clamp(1.5rem, 1.38rem + 0.58vw, 1.875rem);
+    --space-lg: clamp(2rem, 1.84rem + 0.78vw, 4.75rem);
+    --space-xl: clamp(2.5rem, 2.38rem + 0.98vw, 6.75rem);
+    --space-2xl: clamp(2rem, 1.07rem + 4.66vw, 5rem);
+
+    --radius-sm: 0.25rem;
+    --radius-md: 0.45rem;
+    --radius-lg: 0.75rem;
+
+    --transition-smooth: all 0.3s ease;
 }
 /* Hero */
 .hero {
