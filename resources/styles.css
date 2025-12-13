@@ -99,8 +99,9 @@ h4 {
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
 }
-figure.card-md {
-    margin: 0 auto;
+/* Ensure the figure takes up the full width of the grid slot */
+.block-md figure.card-md {
+    margin: 0;
 }
 .card-md__image-container1 {
     inline-size: 100%;
@@ -277,4 +278,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
     background: var(--color-bg-neutral); /* New light cyan background */
+}
+.g-background-default {
+    background-color: red !important;
 }

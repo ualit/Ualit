@@ -172,7 +172,7 @@ h4 {
     margin-block-start: 1em;
 }
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     line-height: 1.5;
     font-family: "OpenSans Regular", Fallback, sans-serif;
     font-size: var(--font-size-base);
