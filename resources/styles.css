@@ -1,0 +1,280 @@
+/* Hero */
+.hero {
+    padding-block: var(--space-2xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-md);
+}
+@keyframes intro {
+    0% {
+        transform: translate(0px, 20px);
+        opacity: 0;
+    }
+}
+.hero h1,
+h4 {
+    margin-block-start: var(--space-sm);
+    animation: intro 1s ease;
+}
+.hero h4 {
+    max-inline-size: 55ch; /* ==> affects about hero h4 only */
+}
+/* Small Grid */
+.content-group {
+    padding-block-end: var(--space-2xl);
+}
+.block-small {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(clamp(11.75rem, 40vw, 18.75rem), 1fr)
+    );
+    gap: var(--space-md);
+    margin-block-start: var(--space-sm);
+}
+.card {
+    padding: var(--space-sm);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-border);
+    transition: var(--transition-smooth);
+}
+.card:hover {
+    box-shadow: var(--shadow-large);
+}
+.card p {
+    color: var(--color-text-base);
+}
+.card .text-small {
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+.card h3 {
+    margin-block-start: 0.6rem;
+}
+/* Contacts */
+.content-block-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-lg);
+    padding: var(--space-lg);
+    margin-block-end: var(--space-md);
+}
+.content-block-centered > * {
+    margin-block-start: 0;
+    max-inline-size: 50ch;
+    text-align: center;
+}
+.content-block-centered h2 {
+    margin-block-start: 1em;
+}
+.content-block-centered p {
+    color: var(--color-text-base);
+}
+.primary-button {
+    background-color: var(--color-bg-dark);
+    color: var(--color-bg-light);
+    padding: 0.75em 1.75em;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-smooth);
+}
+.primary-button:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-bg-dark);
+    box-shadow: var(--shadow-medium);
+}
+/* Large Grid */
+.block-md {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(clamp(12rem, 40vw, 26rem), 1fr)
+    );
+    grid-gap: var(--space-sm) var(--space-lg);
+}
+#highlight {
+    background-color: var(--color-bg-neutral);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+figure.card-md {
+    margin: 0 auto;
+}
+.card-md__image-container1 {
+    inline-size: 100%;
+    block-size: auto; /* Browser default, aspect-ratio handles the height calculation */
+    aspect-ratio: 4 / 3; /* Defines the container as a 4:3 shape (wider than it is tall), ensuring height is .75 of the calculated width */
+    overflow: hidden; /* Hides any part of the image that extends beyond the container's rounded corners */
+    border-radius: var(--radius-md);
+}
+.card-md__image-container1 img {
+    /* The image must fill the exact dimensions set by the container's aspect-ratio */
+    display: block;
+    inline-size: 100%;
+    block-size: 100%; /* Forces the image to exactly match the height of the 4:3 container */
+    max-inline-size: 100%; /* Prevents the image from stretching beyond its original pixel dimensions if the container is larger */
+    object-fit: cover; /* Prevents image distortion by cropping the excess parts of the image to perfectly fill the container's space */
+}
+figcaption {
+    font-size: var(--font-size-sm);
+    margin-block-start: var(--space-sm);
+}
+.card-md h2 {
+    margin-block-start: 0.6rem;
+}
+.tertiary-button {
+    font-size: var(--font-size-md);
+    font-family: "Manrope", serif, sans-serif;
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+    padding-block-start: var(--space-md);
+    transition: var(--transition-smooth);
+}
+.tertiary-button:hover {
+    color: var(--color-accent);
+}
+.cta-arrow {
+    color: var(--color-accent);
+}
+/* About - Carousel */
+.carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    max-inline-size: 100%; /* redundant by flex child */
+    padding: 0.5rem 0 1rem 0;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+figure.carousel__figure {
+    flex: 1 0 0;
+    min-inline-size: min(17.5rem, 100%);
+    margin: 0;
+}
+.carousel__figure__image-container {
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+.carousel__figure__image-container img {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    max-inline-size: 100%;
+    object-fit: fill;
+    transition: var(--transition-smooth);
+}
+figure.carousel__figure:hover img {
+    transform: scale(1.1);
+}
+/* About - Work - Large Grid  */
+.group-title {
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+.a-link {
+    color: var(--color-accent);
+}
+.a-link:hover {
+    text-decoration: underline;
+}
+.list-alt > * {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6rem;
+}
+.list-alt .aside {
+    font-weight: var(--font-weight-medium);
+    flex: 0 0 4rem;
+}
+.list-alt .main {
+    flex: 1 1 0;
+    min-inline-size: min(17.5rem, 100%);
+}
+.list-alt {
+    margin-block: revert;
+}
+.list-alt li {
+    margin-block-end: 1rem;
+}
+.list-alt p {
+    margin-block-start: 0;
+}
+/* About - What I'm reading - Large Grid  */
+.card-md__image-container2 {
+    inline-size: 100%;
+    max-inline-size: 15.625rem;
+    aspect-ratio: 2 / 3; /* 2:3 ratio for book cover */
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-inline: auto;
+}
+
+.card-md__image-container2 img {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    max-inline-size: 100%;
+    object-fit: cover;
+}
+.card-md__image-container2 + figcaption {
+    text-align: center;
+}
+/* Blogs */
+.margin-sm {
+    padding-block-end: var(--space-sm);
+}
+.text-small {
+    margin-block-start: 0;
+    font-size: var(--font-size-sm);
+}
+.excerpt {
+    text-wrap: balance;
+}
+.post a {
+    color: var(--color-accent);
+}
+.post a:hover {
+    text-decoration: underline;
+}
+.entry {
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 36em;
+    margin-inline: auto;
+}
+.entry em {
+    font-size: var(--font-size-sm);
+}
+.entry blockquote {
+    font-family: "Manrope";
+    font-weight: 600;
+    margin: 1.8em 0.8em;
+    border-left: 0.2rem dotted var(--color-accent);
+    padding: 0.1em 1em;
+    color: var(--color-bg-dark);
+    font-size: var(--font-size-md);
+    font-style: italic;
+}
+.entry li {
+    list-style: revert;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: var(--color-bg-neutral);
+    width: 100%;
+    margin: 0;
+    padding: 0.6em;
+    border-radius: var(--radius-lg);
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: var(--color-bg-neutral); /* New light cyan background */
+}

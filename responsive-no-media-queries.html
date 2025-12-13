@@ -1,0 +1,112 @@
+<!doctype html>
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👽</text></svg>"
+        />
+        <title>Ualit Personal Site</title>
+        <meta charset="utf-8" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Personal Site of Ualit." />
+        <meta property="og:description" content="Personal Site of Ualit." />
+        <meta name="author" content="Ualit" />
+        <link rel="stylesheet" type="text/css" href="resources/main.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles.css" />
+    </head>
+    <body>
+        <script src="prism.js"></script>
+        <div class="page-container">
+            <!--Navigation-->
+            <header>
+                <a href="index.html" class="logo">UALIT<span>UALIT</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!--Hero-->
+            <section class="hero margin-sm">
+                <h1>Responsive website with no media queries</h1>
+                <p class="excerpt">
+                    A fully responsive site without media queries using Flexbox
+                    and CSS Grid.
+                </p>
+                <p class="text-small">
+                    May 19, 2020 ·
+
+                    <i style="padding-right: 8px"></i>7 minute read
+                </p>
+            </section>
+            <article class="post">
+                <div class="content-group">
+                    <div class="entry">
+                        <p>
+                            I finally redesigned this website. The challenge was
+                            to do a fully responsive site without media queries
+                            using
+                            <a
+                                href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                                target="_blank"
+                                >Flexbox</a
+                            >
+                            and
+                            <a
+                                href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                                target="_blank"
+                                \
+                                >CSS Grid</a
+                            >.
+                        </p>
+
+                        <p>
+                            <img
+                                src="images/responsive-no-media.gif"
+                                alt="Visual explorations for the new  website"
+                            /><em>Responsive design without media queries</em>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <pre><code class="language-css">.site-header {
+display: flex;
+justify-content: space-between;
+}
+</code></pre>
+
+            <!--Footer-->
+            <footer>
+                <a href="index.html" class="logo">UALIT<span>UALIT</span></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Linkedin</a>
+                            <img
+                                class="hide"
+                                loading="lazy"
+                                src="/og/fonts/external-link.svg"
+                                alt="arrow icon external link"
+                            />
+                        </li>
+                        <li>
+                            <a href="#">RSS</a>
+                            <img
+                                class="hide"
+                                loading="lazy"
+                                src="/og/fonts/external-link.svg"
+                                alt="arrow icon external link"
+                            />
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+            <!--About - END-->
+        </div>
+    </body>
+</html>
